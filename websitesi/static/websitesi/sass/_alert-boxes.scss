@@ -1,0 +1,55 @@
+/* THE ALERT MESSAGE BOX */
+.alert {
+	padding: 21px 15px 21px 29px;
+	@include font(16px,#010101);
+	font-family: $titles-font-family;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	border: 2px solid rgba(225,225,225,.7);
+	&__title {
+		position: relative;
+	}
+	.closebtn {
+		margin-left: 15px;
+		@include font(18px,#a9a9a9);
+		line-height: 24px;
+		cursor: pointer;
+		transition: 0.3s;
+		&:hover {
+			color: black;
+		}
+	}
+	&--info {
+		border-color: rgba(20, 179, 228, .7);
+		background-color: rgb(172, 228, 245);
+		color: rgb(20, 179, 228);
+		.closebtn {
+			color: rgb(20, 179, 228);
+		}
+	}
+	&--warning {
+		border-color: rgba(254, 198, 77, .7);
+		background-color: rgb(254, 235, 193);
+		color: rgb(254, 198, 77);
+		.closebtn {
+			color: rgb(254, 198, 77);
+		}
+	}
+	&--danger {
+		background-color: rgb(251, 204, 202);
+		border-color: rgba(243, 109, 106, .7);
+		color: rgb(243, 109, 106);
+		.closebtn {
+			color: rgb(243, 109, 106);
+		}
+	}
+	&--success {
+		background-color: rgb(165, 236, 221);
+		border-color: rgba(0, 201, 159, .7);
+		color: rgb(0, 201, 159);
+		.closebtn {
+			color: rgb(0, 201, 159);
+		}
+	}
+}

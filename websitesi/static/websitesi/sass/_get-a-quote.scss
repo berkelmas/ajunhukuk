@@ -1,0 +1,28 @@
+/* GET A QUOTE */
+.get-a-quote {
+  background-color: $main-theme-color;
+  padding: 28px 0 30px;
+  margin-top: 47px;
+  .column {
+    position: relative;
+  }
+  &__text {
+    font-family: $primary-font-family;
+    @include font(24px,#fff,700,-25);
+    line-height: 40px;
+    margin-bottom: 15px;
+    text-align: center;
+    @include medium-size {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  &__link {
+    background-color: #fff;
+    line-height: 37px;
+    padding: 2px 20px;
+    color: $main-theme-color;
+    z-index: 1;
+    box-shadow: none;
+  }
+}

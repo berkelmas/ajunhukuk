@@ -1,0 +1,69 @@
+@mixin font($size, $color: null, $font-weight: null, $letterspacing: null ) {
+	font-size: $size;
+	font-weight: $font-weight;
+	@if $letterspacing != null {
+		letter-spacing: ($letterspacing / 1000) + em;
+	}
+	color: $color;
+}
+
+@mixin letter-spacing($value) {
+	letter-spacing: ($letterspacing / 1000) + em;
+}
+
+@mixin small-mobile {
+	@media screen and (max-width: #{$small-mobile} - 1px) {
+		@content;
+	}
+}
+
+@mixin small-size {
+	@media screen and (max-width: #{$small}) {
+		@content;
+	}
+}
+
+@mixin medium-size {
+	@media screen and (min-width: #{$medium}) {
+		@content;
+	}
+}
+
+@mixin large-size-max {
+	@media screen and (max-width: #{$desktop-width} - 1px) {
+		@content;
+	}
+}
+
+@mixin large-size {
+	@media screen and (min-width: #{$large}) {
+		@content;
+	}
+}
+
+// placeholder
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+// usage placeholder
+
+// @include placeholder {
+//   properties for placeholder here
+// }

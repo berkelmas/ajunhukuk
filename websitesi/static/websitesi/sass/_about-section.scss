@@ -1,0 +1,42 @@
+/* ABOUT SECTION */
+.about-wrapper {
+	margin: 45px 0 40px;
+	@include large-size {
+		margin: 70px 0 57px;
+	}
+}
+
+.about-section {
+	&__column {
+		display: flex;
+		&:hover {
+			*[class^=icon-] {
+				font-size: 42px;
+				margin-right: 7px;
+			}
+			.about-section__title {
+				color: $main-theme-color;
+			}
+		}
+		@include large-size-max {
+			margin-top: 40px;
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		[class^='icon-'] {
+			@include font(36px,$main-theme-color);
+			line-height: 1;
+			margin-top: 3px;
+			margin-right: 13px;
+			transition: 0.1s ease-in-out;
+			&:before {
+				margin: 0;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 13px;
+		line-height: 36px;
+	}
+}

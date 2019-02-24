@@ -1,0 +1,147 @@
+{% load static %}
+
+
+	<!-- FOOTER -->
+	<footer class="main-footer dark-section">
+		<div class="row row-widgets">
+			<div class="columns small-12 medium-6 large-3">
+				<section class="widget widget-address">
+					<h3 class="widget-title">Bize Ulaşın</h3>
+					<p>Manas bulv. Adalet Mah. Folkart Towers A Kule KNo:47/B K:28 DNo:2809 Bayraklı-İzmir</p>
+					<p class="widget-address__info icon-phone-3"><a href="teL:+902322423661">0 (232) 242 36 61</a></p>
+					<p class="widget-address__info icon-mail-3"><a href="mailto:engin@ajunhukuk.com">engin@ajunhukuk.com</a></p>
+				</section>
+
+
+			</div>
+			<div class="columns small-12 medium-6 large-3">
+				<section class="widget widget_pages">
+					<h3 class="widget-title">İç Linkler</h3>
+					<ul>
+                        <li><a href="{% url 'anasayfa' %}">Ana Sayfa</a></li>
+						<li><a href="{% url 'hakkimizda' %}">Hakkımızda</a></li>
+						<li><a href="{% url 'uzmanliklar' %}">Uzmanlık Alanlarımız</a></li>
+						<li><a href="{% url 'makaleler' %}">Hukuki Yayınlarımız</a></li>
+						<li><a href="{% url 'kariyer' %}">Kariyer Olanakları</a></li>
+						<li><a href="{% url 'iletisim' %}">Bize Ulaşın</a></li>
+
+					</ul>
+				</section>
+			</div>
+			<div class="columns small-12 medium-6 large-3">
+				<section class="widget widget_categories">
+					<h3 class="widget-title">Uzmanlık Alanları</h3>
+					<ul>
+						<li class="cat-item">
+							<a href="{% url 'ailehukuku' %}">Aile Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'cezahukuku' %}">Ceza Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'ishukuku' %}">İş Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a>
+						</li>
+						<li class="cat-item">
+							<a href="{% url 'trafikhukuku' %}">Trafik Sigorta Hukuku</a>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="columns small-12 medium-6 large-3">
+				<section class="widget widget-latest-posts">
+					<h3 class="widget-title">Son Hukuki Yayınlar</h3>
+					<ul>
+                        {% for yayin in ucmakale %}
+						<li>
+							<a class="widget__date" href="news.html">{{ yayin.makale_yayintarihi }}</a>
+							<h4><a href="single_news.html">{{ yayin.makale_baslik }}</a></h4>
+						</li>
+                        {% endfor %}
+					</ul>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns small-12">
+				<div class="row align-justify align-middle logo-socials-footer small-collapse">
+					<div class="columns small-12 medium-expand">
+						<div class="logo">
+							<a href="{% url 'anasayfa' %}">
+								<img width="100" src="{% static 'websitesi/images/ajun-hukuk-logo-beyaz.png' %}" alt="Ajun Hukuk Beyaz Logo">
+							</a>
+						</div>
+					</div>
+
+
+
+					<div class="columns small-12 shrink">
+						<div class="socials">
+							<a href="#"><i class="icon-twitter"></i></a>
+							<a href="#"><i class="icon-facebook"></i></a>
+							<a href="#"><i class="icon-linkedin"></i></a>
+							<a href="#"><i class="icon-instagram"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+        		<div class="row">
+			<div class="columns small-12">
+				<div class="row align-justify align-middle logo-socials-footer small-collapse">
+
+
+
+
+					<div class="columns small-12 shrink">
+						<div>
+                            <p style="font-size: small;">İş bu Web sitesi ve tüm sayfaları Fikir ve Sanat Eserleri Kanununa tabiidir. İçeriğine ilişkin her türlü ses, görüntü,yazı içeren bilgi-belge, marka ve her türlü fikri ve sınai haklar ile tüm telif hakları ve diğer fikri ve sınai mülkiyet hakları   Avukat Engin Ajun a aittir.
+Sitede yer alan bileğilerin çoğaltılması, başkanlık lisansa çevrilmesi, saklanması veya işleme tutulmasında dahil Avukat Engin Ajun’un iznine tabidir.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+
+	<script src="{% static 'websitesi/js/jquery.js' %}"></script>
+	<script src="{% static 'websitesi/js/swiper.jquery.min.js' %}"></script>
+	<script src="{% static 'websitesi/js/imagesloaded.pkgd.min.js' %}"></script>
+	<script src="{% static 'websitesi/js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'websitesi/js/jquery.matchHeight.js' %}"></script>
+	<script src="{% static 'websitesi/js/jquery.magnific-popup.min.js' %}"></script>
+
+	<script src="{% static 'websitesi/js/main.js' %}"></script>
+
+	<!-- External libraries: jQuery & GreenSock -->
+	<script src="{% static 'websitesi/layerslider/js/jquery.js' %}"></script>
+	<script src="{% static 'websitesi/layerslider/js/greensock.js' %}"></script>
+
+	<!-- LayerSlider script files -->
+	<script src="{% static 'websitesi/layerslider/js/layerslider.transitions.js' %}"></script>
+	<script src="{% static 'websitesi/layerslider/js/layerslider.kreaturamedia.jquery.js' %}"></script>
+	<!-- Initializing the slider -->
+
+</body>
+
+</html>

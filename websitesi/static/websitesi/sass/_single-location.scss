@@ -1,0 +1,73 @@
+/* SINGLE LOCATION */
+.single-location {
+  &__map {
+    height: 450px;
+  }
+  &__title {
+    @include font(32px,$main-theme-color);
+    line-height: 36px;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $content-color-minor;
+    margin: 16px 0 29px;
+    display: block;
+  }
+}
+
+// Location Page
+.locations {
+  &__map {
+    height: 710px;
+  }
+  &__title {
+    @include font(32px,$main-theme-color);
+    line-height: 36px;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $content-color-minor;
+    margin: 16px 0 29px;
+    display: block;
+  }
+}
+
+// Home Page
+.home-find-people {
+  &__map {
+    height: 474px;
+  }
+  &__title {
+    @include font(32px,$main-theme-color);
+    line-height: 36px;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: $content-color-minor;
+    margin: 16px 0 29px;
+    display: block;
+  }
+}
+
+h1, h2,h3, h4, h5, h6 {
+  &.single-location__title {
+    margin-top: 30px;
+    @include medium-size {
+      margin-top: 5px;
+    }
+  }
+}
+
+.row.location-areas {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  border-top: 1px dashed rgba(0, 0, 0, 0.2);
+  padding-bottom: 17px;
+  padding-top: 35px;
+  margin: 30px 0 37px;
+}

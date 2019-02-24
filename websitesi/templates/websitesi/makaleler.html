@@ -1,0 +1,140 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading page-heading--height-3  overlay">
+
+		<img class="s-img-switch" src="{% static 'websitesi/images/hukuki-yayinlar.png' %}" alt="Hukuki Yayınlar" />
+
+		<h2 class="page-heading__title">Hukuki Yayınlar</h2>
+	</div>
+
+	<!-- BREADCRUMBS -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="{% url 'anasayfa' %}" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="{% url 'makaleler' %}" class="b-breadcrumbs__link">Hukuki Yayınlar</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row align-center">
+		<!-- BLOG -->
+		<div class="columns small-12 large-9">
+			<div class="articles">
+
+
+                {% for makale in articles %}
+
+                <article class="post">
+					<header class="post__header">
+						<a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">
+							<figure class="post__thumb effect-apollo">
+								<img src="{% static 'websitesi/images/ajun-hukuk-makaleleri.png' %}" alt="Hukuki Makaleler">
+								<div class="effect-apollo__overlay"></div>
+							</figure>
+						</a>
+						<div class="post__meta">
+							<time class="post__date"><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_yayintarihi }}</a></time>
+
+						</div>
+						<h2 class="post__title"><a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}">{{ makale.makale_baslik }}</a></h2>
+					</header>
+
+					<div class="post__excerpt">
+                        {{ makale.makale_mesaj|safe|truncatewords:"50"|linebreaks }}
+					</div>
+
+					<footer class="post__footer">
+						<a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="link-arrow">Daha Fazlası</a>
+					</footer>
+				</article>
+
+
+                {% endfor %}
+
+			</div>
+
+			<nav class="pagination">
+				<div class="nav-links">
+                    {% if articles.has_previous %}
+					<a class="prev page-numbers" href="?page={{ articles.previous_page_number }}"><i class="icon-left-4"></i></a>
+                    {% endif %}
+
+
+                    {% for i in articles.paginator.page_range %}
+
+                        {% if forloop.counter < 5 %}
+                            <a class="page-numbers {% if i == articles.number %}current{% endif %}" href="?page={{forloop.counter}}">{{forloop.counter}}</a>
+                        {% endif %}
+
+                    {% endfor %}
+
+                    {% if articles.has_next %}
+					<a class="next page-numbers" href="?page={{ articles.paginator.num_pages }}"><i class="icon-right-4"></i></a>
+                    {% endif %}
+				</div>
+			</nav>
+		</div>
+
+		<!-- SIDEBAR -->
+		<div class="columns small-12 medium-6 large-3">
+			<!-- Latest Posts -->
+			<section class="widget widget-latest-posts">
+				<h3 class="widget-title">Son Hukuki Yayınlar</h3>
+				<ul>
+
+                    {% for yayin in ucmakale %}
+					<li>
+						<a class="widget__date" href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_yayintarihi }}</a>
+						<h4><a href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_baslik }}</a></h4>
+					</li>
+                    {% endfor %}
+
+				</ul>
+			</section>
+			<!-- Categories -->
+			<section class="widget widget_categories">
+				<h3 class="widget-title">Hukuki Yayın Kategorileri</h3>
+				<ul>
+					<li><a href="?hukuki-alan=ishukuku">İş ve Sosyal Güvenlik Hukuku</a></li>
+					<li><a href="?hukuki-alan=cezahukuku">Ceza Hukuku</a></li>
+					<li><a href="?hukuki-alan=ailehukuku">Aile Hukuku</a></li>
+					<li><a href="?hukuki-alan=icrahukuku">İcra ve İflas Hukuku</a></li>
+                    <li><a href="?hukuki-alan=gayrimenkulhukuku">Gayrimenkul Hukuku</a></li>
+                    <li><a href="?hukuki-alan=saglikhukuku">Sağlık Hukuku</a></li>
+                    <li><a href="?hukuki-alan=trafikhukuku">Trafik Sigorta Hukuku</a></li>
+                    <li><a href="?hukuki-alan=sozlesmelerhukuku">Sözleşmeler Hukuku</a></li>
+                    <li><a href="?hukuki-alan=ticarethukuku">Ticaret Hukuku</a></li>
+				</ul>
+			</section>
+
+
+
+		</div>
+	</div>
+
+	<!-- GET A QUOTE -->
+	<div class="get-a-quote">
+		<div class="row align-center">
+			<div class="column small-12 medium-expand">
+				<h3 class="get-a-quote__text">Hukuki Yardıma Mı İhtiyacınız Var? Ajun Hukuk Ekibi Sizin İçin Burada</h3>
+			</div>
+			<div class="column small-12 shrink">
+				<a href="tel:+902322423661" class="btn get-a-quote__link">Hemen Ara -</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

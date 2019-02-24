@@ -1,0 +1,110 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading page-heading--height-3  overlay">
+
+		<img class="s-img-switch" src="{% static 'websitesi/images/ajun-hukuk-bize-ulasin.png' %}" alt="Ajun Hukuk ile İletişime Geçin" />
+
+		<h2 class="page-heading__title">Bize Ulaşın</h2>
+	</div>
+
+	<!-- BREADCRUMBS -->
+	<div class="row-fluid light-grey-bg">
+		<div class="row">
+			<div class="column">
+				<div class="b-breadcrumbs b-breadcrumbs--marg-b">
+					<a href="index.html" class="b-breadcrumbs__link">Ana Sayfa</a>
+					<a href="contact.html" class="b-breadcrumbs__link">Bize Ulaşın</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="row-fluid contacts-section">
+		<div class="row">
+			<div class="columns small-12">
+				<h2 class="contacts-section__title">Ana Ofisimiz</h2>
+				<div class="row">
+					<div class="columns small-12 medium-6 large-4">
+						<h4>Address</h4>
+						<div class="widget widget-address">
+							<p class="widget-address__text">Manas bulv. Adalet Mah. Folkart Towers
+                                                            A Kule K No:47/B  K:28  D. No:2809 Bayraklı-İzmir
+                            </p>
+							<p class="widget-address__info icon-phone-3">+90 (555) 598 03 76</p>
+							<p class="widget-address__info icon-fax">+90 (232) 242 36 61</p>
+							<p class="widget-address__info icon-mail-3"><a class="widget-address__link" href="mailto:info@ajunhukuk.com">info@ajunhukuk.com</a></p>
+						</div>
+
+					</div>
+
+					<div class="columns small-12 medium-6 large-4">
+						<h4>Çalışma Saatleri</h4>
+						<p>
+							Haftaiçi: <strong>09:00 - 18:00</strong> <br> Cumartesi: <strong>09:00 - 13:00</strong><br> Pazar: <strong>Kapalı</strong>
+						</p>
+					</div>
+
+					<div class="columns small-12 medium-6 large-4">
+						<h4>Ofis Adresi</h4>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12497.797297318923!2d27.1767687!3d38.4541868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb16364e47894b32f!2sFolkart+Towers!5e0!3m2!1str!2str!4v1550773936264" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Get in touch -->
+	<div class="row">
+		<div class="columns">
+			<form id="iletisimformu" class="contact-form" method="post">
+                {% csrf_token %}
+				<div class="row">
+					<div class="columns">
+						<h2 class="element-title contact-form__title">İletmek İstedikleriniz</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="columns small-12 medium-5">
+						<label for="name">İsim*</label>
+						<input type="text" name="isim" required>
+
+						<label for="email">Mail Adresi*</label>
+						<input type="email" name="email" required>
+
+						<label for="subject">Konu*</label>
+						<input type="text" name="konu" required>
+
+						<label for="phone">Telefon*</label>
+						<input type="tel" name="telefon" required>
+					</div>
+					<div class="columns small-12 medium-7">
+						<label for="message">Mesaj*</label>
+						<textarea name="mesaj" required></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="columns small-12 medium-5">
+						<button type="submit" class="btn">Gönder</button>
+					</div>
+				</div>
+			</form>
+
+		</div>
+	</div>
+
+
+<br>
+
+
+
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

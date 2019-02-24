@@ -1,0 +1,23 @@
+/* widget blockquote */
+.widget-blockquote {
+	.blockquote,
+	blockquote {
+		margin-top: 10px;
+		padding: 25px 20px 40px 30px;
+	}
+}
+
+.dark-section {
+	.blockquote,
+	blockquote {
+		background-color: #232325;
+		color: #fff;
+	}
+	.blockquote {
+		&--style-1 {
+			&:after {
+				border-color: #1c1c1e transparent transparent #1c1c1e;
+			}
+		}
+	}
+}

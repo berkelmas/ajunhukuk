@@ -1,0 +1,43 @@
+/**
+ * Foundation for Sites by ZURB
+ * Version 6.2.4
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
+
+// Dependencies
+@import "normalize";
+
+// Sass utilities
+@import 'util/util';
+
+// Global variables and styles
+@import 'global';
+
+// Settings
+@import 'settings/settings';
+
+// Components
+@import 'grid/grid';
+
+@import 'components/flex';
+
+@mixin foundation-everything($flex: false) {
+  @if $flex {
+    $global-flexbox: true !global;
+  }
+
+  @include foundation-global-styles;
+  @if not $flex {
+    @include foundation-grid;
+  }
+  @else {
+    @include foundation-flex-grid;
+  }
+
+  @if $flex {
+    @include foundation-flex-classes;
+  }
+}
+
+@include foundation-everything(true)

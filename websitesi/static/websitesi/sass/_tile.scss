@@ -1,0 +1,108 @@
+/* TILE GRID */
+.tile-col {
+  margin-bottom: 10px;
+  @include medium-size {
+    margin-bottom: 38px;
+  }
+  &--style-2 {
+    @include medium-size {
+      margin-bottom: 30px;
+    }
+  }
+}
+.tile {
+  text-align: center;
+  height: 100%;
+  padding: 40px 30px 54px;
+  background-color: #f8f8f8;
+  position: relative;
+  &:hover {
+    .tile__title,
+    .tile__icon,
+    .tile__arrow {
+      color: $main-theme-color;
+    }
+    .tile__icon {
+      transform: scale(1.16);
+    }
+    .tile__arrow {
+      transform: translateX(-20%);
+    }
+  }
+  &__icon {
+    font-size: 36px;
+    color: #898d98;
+    transition: 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition-property: color, transform;
+  }
+  &__title {
+    font-family: $primary-font-family;
+    color: #303133;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 25px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    transition: 250ms ease-in;
+    transition-property: color;
+  }
+  &__description {
+    line-height: 24px;
+    margin-top: 7px;
+  }
+  &__arrow {
+    font-family: $primary-font-family;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b9b9b9;
+    line-height: 16px;
+    z-index: 1;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 300ms ease-out;
+    transition-property: transform;
+    &:visited {
+      color: #b9b9b9;
+    }
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
+  &--style-2 {
+    padding: 0;
+    background-color: transparent;
+    text-align: left;
+    .tile__title {
+      margin-top: 23px;
+    }
+  }
+}
+
+.effect-apollo > .s-back-switch {
+  &.tile__img {
+    height: 230px;
+    &--height-2 {
+      height: 170px;
+    }
+  }
+}
+
+.tile-practice-2-row {
+  @include large-size {
+    margin-top: 60px;
+  }
+}
+
+@import "partials/team-person"

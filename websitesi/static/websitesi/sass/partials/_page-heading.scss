@@ -1,0 +1,31 @@
+.page-heading {
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1024px) {
+    max-height: 150px;
+  }
+  &__title {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+  }
+  &--height-2 {
+    height: 250px;
+  }
+  &--height-3 {
+    height: 350px;
+  }
+  &--no-img {
+    background-color: #3a3a3c;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  &.page-heading__title {
+    margin-top: auto;
+  }
+}

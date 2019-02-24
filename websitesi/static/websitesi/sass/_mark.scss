@@ -1,0 +1,9 @@
+mark {
+	color: #fff;
+	&.main-color {
+		background-color: $main-theme-color;
+	}
+	&.minor-color {
+		background-color: $content-color-minor;
+	}
+}

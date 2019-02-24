@@ -1,0 +1,246 @@
+/* COMMON ELEMENTS */
+.btn-columns {
+	.btn {
+		margin-bottom: 7px;
+	}
+}
+
+h3.element-title {
+	margin-top: 71px;
+	margin-top: 24px;
+	margin-bottom: 30px;
+}
+
+.slider-3 {
+	margin-top: 45px;
+	img {
+		margin-bottom: 0;
+	}
+}
+
+.honors-awards {
+	margin-top: 50px;
+	@include medium-size {
+		margin-top: 74px;
+	}
+	@include large-size {
+		margin-bottom: 147px;
+	}
+	&__title {
+		margin-bottom: 35px;
+	}
+	&--about {
+		@include medium-size {
+			margin-top: 35px;
+		}
+	}
+	&--home-3 {
+		@include medium-size {
+			margin-bottom: 30px;
+		}
+		@include large-size {
+			margin-bottom: 0;
+			margin-top: 103px;
+		}
+	}
+}
+
+.row {
+	&--people-page {
+		margin-bottom: 50px;
+	}
+	&--location {
+		justify-content: center;
+		@include large-size {
+			justify-content: flex-start;
+		}
+	}
+}
+.overlay {
+	position: relative;
+	&:before {
+		position: absolute;
+		content:" ";
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		display: block;
+		z-index:0;
+		background-color: rgba(19,19,21,0.5);
+	}
+}
+
+.b-breadcrumbs {
+	margin-bottom: 10px;
+	@include medium-size {
+		margin-bottom: 25px;
+	}
+	@include large-size {
+		margin-bottom: 55px;
+	}
+	&__link {
+		color: $content-txt-color-normal;
+		font-family: $content-font-family;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 50px;
+		&:after {
+			content: '\ede6';
+			font-family: "fontello";
+			font-size: 10px;
+			display: inline-block;
+			margin-left: 4px;
+		}
+		&:last-child {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	&--marg-b {
+		@include large-size {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+.single-content {
+	&__img {
+		margin-bottom: 40px;
+	}
+	h2 {
+		&.single-content__title {
+			margin-top: 0;
+			margin-bottom: 30px;
+			line-height: 30px;
+		}
+	}
+	&__title {
+		margin: 15px 0;
+		&--in-text {
+			margin-top: 30px;
+			margin-bottom: 0px;
+			&+.single-content__paragraph {
+				margin-top: 15px;
+			}
+		}
+	}
+	&__paragraph {
+		margin: 20px 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.single-practice {
+	margin-bottom: 65px;
+	@media screen and (max-width: 1024px) {
+		margin-bottom: 30px;
+	}
+}
+
+.testimonial-item {
+	margin-bottom: 50px;
+	&--style-2 {
+		margin-bottom: 35px;
+	}
+	.blockquote:not(.blockquote--style-2) {
+		padding-left: 30px;
+	}
+}
+
+.table-lead {
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 30px;
+	a {
+		font-size: 14px;
+		text-decoration: underline;
+	}
+}
+
+.slider-1 {
+	img {
+		margin-bottom: 0;
+	}
+}
+
+h3.accordion-main-title {
+	margin-top: -6px;
+	margin-bottom: 12px;
+}
+
+h3.buttons-main-title,
+h4.address-main-title {
+	margin-top: 71px;
+}
+
+h3.drop-caps-main-title {
+	margin-top: 68px;
+}
+
+h3.lists-main-title {
+	margin-top: 43px;
+	margin-bottom: 7px;
+}
+
+h3.testimonials-main-title {
+	margin-top: 47px;
+	margin-bottom: 20px;
+}
+
+h3.tables-main-title {
+	margin-top: 37px;
+	margin-bottom: 0;
+}
+
+h3.highlights-main-title {
+	margin-top: 43px;
+	margin-bottom: 22px;
+}
+
+h3.separators-main-title {
+	margin-top: 46px;
+	margin-bottom: -11px;
+}
+
+h3.alert-boxes-main-title {
+	margin-top: 31px;
+}
+
+h3.socials-main-title {
+	margin-top: 60px;
+}
+
+h3.clients-main-title {
+	margin-top: 43px;
+}
+
+h3.gallery-main-title {
+	margin-top: 53px;
+	margin-bottom: 23px;
+}
+
+.elements-wrapper-row {
+	margin-top: 73px;
+	padding-bottom: 101px;
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+	margin-bottom: 97px;
+}
+
+.elements-blockquote-row {
+	.widget-blockquote {
+		.widget-title {
+			display: none;
+		}
+	}
+}
+
+.our-people-wrapper.our-people-wrapper--elements {
+	padding-bottom: 40px;
+	@include large-size {
+		padding-bottom: 40px;
+	}
+}

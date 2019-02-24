@@ -1,0 +1,15 @@
+/* COMMON */
+.no-scroll {
+  overflow: hidden;
+}
+.block-wrapper {
+  background-color: #fafafa;
+  margin-bottom: 30px;
+  @include medium-size {
+  	margin-bottom: 50px;
+  }
+  @include large-size {
+  	margin-bottom: 0;
+  	padding-bottom: 20px;
+  }
+}

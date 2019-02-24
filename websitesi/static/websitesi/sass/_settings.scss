@@ -1,0 +1,132 @@
+// - - - - - - - - - - - - - - - - - - - - //
+// General
+// - - - - - - - - - - - - - - - - - - - - //
+$theme-color-red:					#b1001e;
+$theme-color-blue:					#1973dc;
+$theme-color-dirty-orange:			#9a8474;
+
+$main-theme-color:					$theme-color-red;
+
+$body-bg-color:						#ffffff;
+$content-color-minor:		#303133;
+
+$primary-font-family:				'Gudea', sans-serif;					// Content
+$titles-font-family:				'Slabo 27px', serif;				// Titles
+$alternative-font-family:			'PT Serif', serif;					// Testimonials
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Content
+// - - - - - - - - - - - - - - - - - - - - //
+$content-font-family:				$primary-font-family;
+$content-txt-size:					16px;
+$content-txt-color-normal:			#777;
+$content-txt-color-link:			$main-theme-color;
+$content-txt-color-link-hover:		#000000;
+$border-color: rgba(0,0,0,.1);
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Titles
+// - - - - - - - - - - - - - - - - - - - - //
+$h1-font-family:					$titles-font-family;
+$h1-txt-size:						40px;
+$h1-txt-color-normal:				#000000;
+$h1-txt-color-link:					#000;
+$h1-txt-color-link-hover:			$main-theme-color;
+
+$h2-font-family:					$titles-font-family;
+$h2-txt-size:						32px;
+$h2-txt-color-normal:				#000000;
+$h2-txt-color-link:					#000;
+$h2-txt-color-link-hover:			$main-theme-color;
+
+$h3-font-family:					$titles-font-family;
+$h3-txt-size:						24px;
+$h3-txt-size-serif:			17px;
+$h3-txt-color-normal:				#000000;
+$h3-txt-color-serif:				#303133;
+$h3-txt-color-link:					#000;
+$h3-txt-color-link-hover:			$main-theme-color;
+
+$h4-font-family:					$titles-font-family;
+$h4-txt-size:						21px;
+$h4-txt-size-serif:			16px;
+$h4-txt-color-normal:				#000000;
+$h4-txt-color-serif:				#303133;
+$h4-txt-color-link:					#000;
+$h4-txt-color-link-hover:			$main-theme-color;
+
+$h5-font-family:					$titles-font-family;
+$h5-txt-size:						15px;
+$h5-txt-color-normal:				#777;
+$h5-txt-color-link:					#777;
+$h5-txt-color-link-hover:			$main-theme-color;
+
+$h6-font-family:					$primary-font-family;
+$h6-txt-size:						16px;
+$h6-txt-color-normal:				#000000;
+$h6-txt-color-link:					#000;
+$h6-txt-color-link-hover:			$main-theme-color;
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Navigation
+// - - - - - - - - - - - - - - - - - - - - //
+// First Level
+$vav-l1-font-family:				$titles-font-family;		// First level font family
+$vav-l1-txt-size:					17px;						// First level text size
+$vav-l1-txt-color:					#000000;					// First level text color
+$vav-l1-txt-color-hover:			#ffffff;					// First level text color hover
+
+// Sublevels
+$vav-sl-bg-color:					#3a3a3c;					// Sublevel bg color
+$vav-mm-title-font-family:			$titles-font-family;		// Megamenu title font family
+$vav-mm-title-txt-size:				17px;						// Megamenu title text size
+$vav-mm-title-txt-color:			#ffffff;					// Megamenu title text color
+$vav-sl-font-family:				$primary-font-family;		// Sublevel font family
+$vav-sl-txt-size:					14px;						// Sublevel text size
+$vav-sl-txt-color:					#b4b4b4;					// Sublevel text color
+$vav-sl-txt-color-hover:			#ffffff;					// Sublevel text hover
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Top Bar
+// - - - - - - - - - - - - - - - - - - - - //
+$tb-bg-color:						#2e2e30;					// Top bar bg color
+$tb-txt-size:						12px;
+$tb-txt-color-normal:				#fff;
+$tb-txt-color-link:					#fff;
+$tb-txt-color-link-hover:			#fff;
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Bottom Bar
+// - - - - - - - - - - - - - - - - - - - - //
+$bb-txt-size:						14px;
+$bb-txt-color-normal:				#b4b4b4;
+$bb-txt-color-link:					$main-theme-color;
+$bb-txt-color-link-hover:			#ffffff;
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Footer
+// - - - - - - - - - - - - - - - - - - - - //
+$footer-bg-color:					#2e2e30;					// Footer bg color
+$footer-title-color:				#ffffff;
+$footer-txt-size:					16px;
+$footer-txt-color-normal:			#b4b4b4;
+$footer-txt-color-link:				$main-theme-color;
+$footer-txt-color-link-hover:		#ffffff;
+$footer-border-color: rgba(255,255,255,.1);
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Services Links
+// - - - - - - - - - - - - - - - - - - - - //
+$services-links-row-bg: #e7e7e7;
+$services-links-item-bg: #e1e1e1;
+$services-links-item-bg-hover: #262729;
+$services-links-txt-size: 14px;
+$services-links-txt-color-hover: #fff;
+$services-links-txt-color-normal: #303133;
+
+// - - - - - - - - - - - - - - - - - - - - //
+// Categories
+// - - - - - - - - - - - - - - - - - - - - //
+$cat-links-txt-color-normal: #303133;
+$cat-links-txt-color-hover: $main-theme-color;
+$cat-links-txt-size: 16px;

@@ -1,0 +1,71 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading page-heading--height-3  overlay">
+
+		<img class="s-img-switch" src="{% static 'websitesi/images/is-ilanlari.png' %}" alt="Ajun Hukuk - İş İlanları" />
+
+		<h2 class="page-heading__title">Kariyer Olanakları</h2>
+	</div>
+
+	<!-- BREADCRUMBS -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="index.html" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="#" class="b-breadcrumbs__link">Kariyer Olanakları</a>
+
+			</div>
+		</div>
+	</div>
+
+
+
+			<!-- Tables -->
+			<div class="row">
+				<div class="columns table-wrapper">
+					<div class="row">
+						<div class="columns">
+							<h3 class="element-title tables-main-title">Ajun Hukuk - İş İlanları</h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="columns">
+							<div>
+								<table>
+									<thead>
+										<tr>
+											<th>İş Ünvanı</th>
+											<th>İş Açıklaması</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+
+                                        {% for i in kariyer %}
+										<tr>
+											<td>{{ i.isilani_isim }}</td>
+											<td>{{ i.isilani_aciklama|safe }}</td>
+											<td><button class="btn"><a style="color: white;" href="mailto:engin@ajunhukuk.com">Başvur</a></button></td>
+										</tr>
+                                        {% endfor %}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

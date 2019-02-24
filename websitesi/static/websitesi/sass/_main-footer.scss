@@ -1,0 +1,77 @@
+/* FOOTER */
+.main-footer {
+  padding: 40px 0 10px;
+  @include large-size {
+    padding: 75px 0 50px;
+  }
+  background-color: $footer-bg-color;
+  color: $footer-txt-color-normal;
+  a {
+    color: $footer-txt-color-link;
+    &:hover {
+      color: $footer-txt-color-link-hover
+    }
+  }
+  .logo-socials-footer,
+  .copyright {
+    margin: 0;
+    @include small-size {
+      justify-content: center;
+      text-align: center;
+    }
+    > .columns {
+      margin-top: 5px;
+      @include large-size {
+        margin-top: 0;
+      }
+    }
+  }
+  .logo-socials-footer {
+    border-top: 1px dashed $footer-border-color;
+    border-bottom: 1px dashed $footer-border-color;
+    margin-top: 9px;
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+  .widget-title {
+    @include font(17px, $footer-title-color, 700);
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    font-family: $primary-font-family;
+    &--contacts {
+      margin-bottom: 29px;
+    }
+  }
+  .widget-latest-posts__list {
+    margin-top: 34px;
+  }
+  .widget-address {
+    margin-bottom: 36px;
+    .widget-title {
+      margin-bottom: 28px;
+    }
+  }
+  .row-widgets {
+    @include large-size {
+      margin-bottom: 5px;
+    }
+  }
+  .copyright {
+    font-size: 14px;
+    padding-bottom: 20px;
+    @include large-size {
+      padding-top: 45px;
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+  .widget-subscribe {
+    .widget-title {
+      margin-bottom: 30px;
+    }
+  }
+  .socials {
+    padding-top: 7px;
+  }
+}

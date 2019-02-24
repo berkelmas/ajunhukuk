@@ -1,0 +1,111 @@
+{% load static %}
+
+
+{% include 'websitesi/components/header.html' %}
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading page-heading--no-img s-back-switch">
+		<h1 class="page-heading__title">Aile Hukuku</h1>
+	</div>
+
+
+	<!-- BREADCRUMBS -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="{% url 'anasayfa' %}" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="{% url 'uzmanliklar' %}" class="b-breadcrumbs__link">Uzmanlık Alanları</a>
+				<a href="{% url 'ailehukuku' %}" class="b-breadcrumbs__link">Aile Hukuku</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- SINGLE PRACTICE -->
+	<div class="row align-center">
+		<div class="columns small-12 large-9">
+			<div class="single-practice">
+				<div class="row">
+					<div class="columns small-12">
+						<div class="single-content">
+							<figure class="post__thumb post__thumb--single-practice effect-apollo">
+								<img src="{% static 'websitesi/images/aile-hukuku.png' %}" alt="Aile Hukuku">
+								<div class="effect-apollo__overlay"></div>
+							</figure>
+							<h2>Aile Hukuku</h2>
+							<p>&nbsp; Hepimizin ailesinde kına, kız isteme, nişanlanma, evlenme gibi örfi gelenekler sürmektedir. Her aile de çiftlerin hayalleri ve bütçe olanaklarında örfi adetleri yerine getirmektedir. Ancak hayaller ile gerçekler zaman içinde birbiriyle uyumlu olmamaktadır. Günümüzde maalesef boşanma davalarında artış vardır. Hal böyle olunca; nişanlanma ile başlayan evlilik ile devam eden süreç boşanma davası ile sonuçlanmaktadır. </p>
+							<p> &nbsp;Çiftler arasında günümüzde artan şekilde; nişanlama safhasından sonra <mark class="main-color">nişan bozulması</mark> diye adlandırılan bir durum söz konusu olmaktadır. Gelenekler gereğince; nişanlama kültüründe ailelerinde birbirlerine karşılıklı hediyeleri söz konusu olur. Nişanlanan gelin ve damat adayına altınlar, ziynetler veya yöresine göre para da takılmaktadır. Bu sebeple, nişanın bozulmasından doğan zararların tazmini söz konusu olmaktadır.</p>
+
+                            <p>&nbsp; Nişanlanmadan sonra evlilik ile devam eden aile kurumunda ilerleyen zaman içinde maalesef sorunlar oluşmaktadır. Hukuki uygulamada bu durum; şiddetli geçimsizlik sebebiyle boşanma davası, aldatma sebebiyle boşanma davası, zina sebebiyle boşanma davası gibi boşanmada özel sebepler ve boşanmada genel sebepler olarak anılan sınıflandırılmaya tabidir. İki tarafın anlaşması ile anlaşmalı, anlaşamamaları durumunda da çekişmeli boşanma davası ortaya çıkar. Boşanma davası sürecinde taraflara, tedbir nafakası olarak adlandırılan ve davanın kesinleşmesinden sonra hükme göre yoksulluk nafakası adını alan nafaka türüne ve müşterek çocuklar için iştirak nafakasına boşanma sonucunda hükmedilebilir. Boşanma davası sonucu ile hüküm altına alınan nafakanın düzenli ödenmemesi icra ceza hukukuna başvurmayı gerektirecektir. Konularla ilgili detaylara
+                                <a href="#">makalelerimizden ulaşabilirsiniz.</a></p>
+
+							<h4>Aile Hukuku Alanında Vekil Olduğumuz Hukuki Süreçlerden Bazıları:</h4>
+							<ul>
+								<li>Boşanma Davaları</li>
+								<li>Vasi Atanması</li>
+								<li>Vesayet Davası </li>
+								<li>Velayet Davası </li>
+								<li>İştirak - Tedbir - Yardım Nafakası </li>
+								<li>Nişanlanma - Evlenme</li>
+								<li>Boşanmanın Genel Sebepleri</li>
+								<li>Boşanmanın Özel Sebepleri</li>
+							</ul>
+
+                                                        <p>Ofisimizin uzmanlık çalışma alanlarından olan; nişanın bozulmasından doğan maddi ve manevi tazminat davası ve boşanma davası ile oluşan sürecin takibinde hak ve menfaat kaybına uğramamanız açısından bu alanlarda uzman avukat ile çalışmanızı önemle önermekteyiz. </p>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- SIDEBAR -->
+		<div class="columns small-12 medium-6 large-3">
+
+			<!-- Practice Areas -->
+			<section class="widget widget_categories">
+				<h3 class="widget-title">Uzmanlık Alanları</h3>
+				<ul>
+					<li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+					<li><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></li>
+					<li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+					<li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+					<li><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></li>
+					<li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+					<li><a href="{% url 'ishukuku' %}">İş ve Sosyal Güvenlik Hukuku</a></li>
+					<li><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></li>
+					<li><a href="{% url 'trafikhukuku' %}">Trafik Sigorta Hukuku</a></li>
+				</ul>
+			</section>
+			<!-- Latest Posts -->
+			<section class="widget widget-latest-posts">
+				<h3 class="widget-title">Ajun Hukuk'tan Son Yayınlar</h3>
+				<ul>
+                    {% for yayin in ucmakale %}
+					<li>
+						<a class="widget__date" href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_yayintarihi }}</a>
+						<h4><a href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_baslik }}</a></h4>
+					</li>
+                    {% endfor %}
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<!-- GET A QUOTE -->
+	<div class="get-a-quote">
+		<div class="row align-center">
+			<div class="column small-12 medium-expand">
+				<h3 class="get-a-quote__text">Aile Hukuku ile ilgili hukuki bir sorununuz mu var?</h3>
+			</div>
+			<div class="column small-12 shrink">
+				<a href="+902322423661" class="btn get-a-quote__link">Hemen Ara</a>
+			</div>
+		</div>
+	</div>
+
+
+
+{% include 'websitesi/components/footer.html' %}

@@ -1,0 +1,23 @@
+/* BLOG PAGINATION */
+.pagination {
+	margin-bottom: 50px;
+	.page-numbers {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 5px;
+		text-align: center;
+		line-height: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		&.current {
+			background-color: $main-theme-color;
+			color: #fff;
+		}
+	}
+	.nav-links {
+		display: flex;
+		justify-content: center;
+	}
+}

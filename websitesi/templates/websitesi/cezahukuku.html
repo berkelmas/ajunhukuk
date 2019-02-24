@@ -1,0 +1,125 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading page-heading--no-img s-back-switch">
+		<h1 class="page-heading__title">Ceza Hukuku</h1>
+	</div>
+
+
+	<!-- BREADCRUMBS -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="{% url 'anasayfa' %}" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="{% url 'uzmanliklar' %}" class="b-breadcrumbs__link">Uzmanlık Alanları</a>
+				<a href="{% url 'cezahukuku' %}" class="b-breadcrumbs__link">Ceza Hukuku</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- SINGLE PRACTICE -->
+	<div class="row align-center">
+		<div class="columns small-12 large-9">
+			<div class="single-practice">
+				<div class="row">
+					<div class="columns small-12">
+						<div class="single-content">
+							<figure class="post__thumb post__thumb--single-practice effect-apollo">
+								<img src="{% static 'websitesi/images/ceza-hukuku.png' %}" alt="Ceza Hukuku">
+								<div class="effect-apollo__overlay"></div>
+							</figure>
+							<h2>Ceza Hukuku</h2>
+							<p>&nbsp; Ceza Hukuku, kanunun yapılmasını emrettiklerini yapmamanın veya yasakladıklarını da yapmanın sonucunda oluşan suça uygulanan yaptırımlarla ilgilenen hukuk dalıdır denebilir. İlkelerinin en önemlilerinden olan, kanunsuz suç ve ceza olmaz ilkesi de bu tanımdan ileri gelmektedir. İşlev olarak hem cezalandırıcı hem de caydırıcıdır.</p>
+							<p> &nbsp;Ceza hukuku, kişilerin hak ve özgürlüklerini, toplum barışını, hukuk devletini ve kamu düzenini korumayı, suçun işlenmesini önlemeyi amaçlar. Suç tipleri, gerçekleşen olaylarda nedensellik bağı, kusur, zaman, yer, yaş gibi her detay ceza hukukunda çok önemlidir. AJUN Hukuk & Danışmanlık uzman ilgi alanlarından olan ceza hukukunda aşağıdakilerle sınırlı olamamak üzere müvekkillerine hizmet vermektedir:</p>
+
+
+							<ul>
+								<li><strong>Ağır Ceza Mahkemelerinde Görülen Davalar</strong></li>
+                                    <ul>
+                                        <li>Kasten Adam Öldürme Suçu</li>
+                                        <li>İrtikap, Zimmet, Rüşvet Suçu</li>
+                                        <li>Taksirle Ölüme Sebep Olma</li>
+                                    </ul>
+								<li><strong>Asliye Ceza Mahkemelerinde Görülen Davalar</strong></li>
+                                    <ul>
+                                        <li>Hakaret Suçu</li>
+                                        <li>Özel Hayatın Gizliliğini İhlal Suçu</li>
+                                        <li>Konut Dokunulmazlığını İhlal Suçu</li>
+                                        <li>Şantaj Suçu</li>
+                                        <li>Tehdit Suçu</li>
+                                        <li>Güveni Kötüye Kullanma Suçu</li>
+                                    </ul>
+								<li><strong>Sulh Ceza Mahkemelerinde Görülen Davalar</strong> </li>
+
+							</ul>
+
+                                                        <p>&nbsp; Ceza hukuku ile ilgili detaylı bilgilere makalelerimizden ulaşabilirsiniz. Ceza hukuku sonuçları itibariyle özel alan bir alandır. Bu nedenle, hak ve menfaat kaybına uğramadan gecikmeksizin alanında uzman avukatlara başvurmanız yararınıza olacaktır. </p>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- SIDEBAR -->
+		<div class="columns small-12 medium-6 large-3">
+
+			<!-- Practice Areas -->
+			<section class="widget widget_categories">
+				<h3 class="widget-title">Uzmanlık Alanları</h3>
+				<ul>
+					<li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+					<li><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></li>
+					<li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+					<li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+					<li><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></li>
+					<li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+					<li><a href="{% url 'ishukuku' %}">İş ve Sosyal Güvenlik Hukuku</a></li>
+					<li><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></li>
+					<li><a href="{% url 'trafikhukuku' %}">Trafik Sigorta Hukuku</a></li>
+				</ul>
+			</section>
+			<!-- Latest Posts -->
+			<section class="widget widget-latest-posts">
+				<h3 class="widget-title">Ajun Hukuk'tan Son Yayınlar</h3>
+				<ul>
+                    {% for yayin in ucmakale %}
+					<li>
+						<a class="widget__date" href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_yayintarihi }}</a>
+						<h4><a href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_baslik }}</a></h4>
+					</li>
+                    {% endfor %}
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<!-- GET A QUOTE -->
+	<div class="get-a-quote">
+		<div class="row align-center">
+			<div class="column small-12 medium-expand">
+				<h3 class="get-a-quote__text">Ceza davanız ile ilgili ceza avukatına ihtiyacınız mı var?</h3>
+			</div>
+			<div class="column small-12 shrink">
+				<a href="+902322423661" class="btn get-a-quote__link">Hemen Ara</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

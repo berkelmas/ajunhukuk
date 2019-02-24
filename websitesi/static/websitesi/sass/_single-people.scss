@@ -1,0 +1,54 @@
+/* SINGLE PEOPLE */
+.single-people {
+  &__img {
+    max-width: 300px;
+    margin: 0 auto 15px;
+    height: 300px;
+    @include large-size {
+      margin-bottom: 0;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &__title {
+    color: $main-theme-color;
+    margin-bottom: 0;
+  }
+  &__text,
+  &__position {
+    color: #909090;
+    font-style: italic;
+    font-family: $primary-font-family;
+    line-height: 18px;
+  }
+  &__position {
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
+  &__city {
+    margin-bottom: 22px;
+  }
+  &__languages {
+    margin-bottom: 0;
+  }
+  .widget-address {
+    margin-bottom: 35px;
+  }
+}
+
+h4 {
+  &.single-people__city {
+    margin-top: 0;
+  }
+}
+h1,h2,h3,h4,h5,h6 {
+  &.single-people-content {
+    &__title {
+      margin-top: 10px;
+      @include large-size {
+        margin-top: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/* CARRERS */
+.careers-thumb {
+	@include large-size {
+		margin-bottom: 37px;
+		height: 520px;
+	}
+}
+
+.careers-table {
+	tr {
+		&:hover {
+			a {
+				color: #fff;
+			}
+		}
+	}
+	td {
+		a {
+			color: $content-color-minor;
+			transition: none;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.single-vacancy {
+	p + ul {
+		margin-top: -18px;
+	}
+}

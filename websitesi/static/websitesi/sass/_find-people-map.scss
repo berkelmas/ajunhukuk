@@ -1,0 +1,63 @@
+/* FIND PEOPLE MAP */
+.find-people-map-inner {
+  padding-bottom: 15px;
+  @include medium-size {
+    padding-bottom: 45px;
+  }
+  @include large-size {
+    padding-bottom: 49px;
+  }
+}
+.find-people-map {
+  background-color: #fafafa;
+  @include large-size {
+    margin-top: 47px;
+  }
+  &__img {
+    width: 100%;
+  }
+  &__list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 1em;
+    @media screen and (max-width: 1024px) {
+      margin-top: 2em;
+    }
+    li {
+      &:before {
+        content: none;
+      }
+    }
+  }
+  &__link {
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    &:hover {
+      color: $main-theme-color;
+    }
+  }
+  &--big {
+    margin-bottom: 135px;
+    background: none;
+    @include large-size {
+      margin-top: 0;
+    }
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 70px;
+    }
+    .find-people-map__img {
+      margin-bottom: 70px;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 40px;
+      }
+    }
+    .find-people-map__list {
+      padding-left: 0;
+      li {
+        line-height: 22px;
+      }
+    }
+  }
+}

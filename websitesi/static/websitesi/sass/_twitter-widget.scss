@@ -1,0 +1,36 @@
+/* widget twitter */
+.widget-twitter {
+	.widget-title {
+		margin-bottom: 29px;
+	}
+	&__data {
+		padding-left: 28px;
+		position: relative;
+		&:before {
+			content: '\ea17';
+			font-family: "fontello";
+			@include font(18px,#47c0d8);
+			position: absolute;
+			left: 0;
+		}
+		p, a {
+			@include font(14px);
+			line-height: 24px;
+			margin-bottom: 0;
+		}
+	}
+	&__date {
+		color: $content-color-minor;
+	}
+}
+
+.dark-section {
+	.widget-twitter {
+		p {
+			color: $footer-txt-color-normal;
+		}
+		&__date {
+			color: #909090;
+		}
+	}
+}

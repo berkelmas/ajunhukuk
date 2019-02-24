@@ -1,0 +1,40 @@
+/* ABOUT ARTICLE */
+.about-article-fluid {
+	background-color: rgba(248,248,248,.5);
+	padding: 20px 0 50px;
+	@include medium-size {
+		margin: 40px 0 30px;
+	}
+	@include large-size {
+		padding: 80px 0 100px;
+		margin: 70px 0 5px;
+	}
+}
+
+.about-article {
+	&__title {
+		margin-bottom: 28px;
+		line-height: 1;
+	}
+	&__section {
+		margin-top: 26px;
+		&-title {
+			margin-bottom: 13px;
+		}
+		p {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+.our-people-wrapper {
+	&.our-people-wrapper {
+		&--about {
+			padding-top: 0;
+			padding-bottom: 0;
+			.block-title {
+				margin-bottom: 37px;
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+/* CONTACT PAGE */
+.contacts-section {
+	background-color: #fafafa;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+	@include large-size {
+		padding-bottom: 45px;
+		margin-bottom: 90px;
+	}
+	&__title {
+		text-align: center;
+		@include large-size {
+			margin-bottom: 38px;
+		}
+	}
+}

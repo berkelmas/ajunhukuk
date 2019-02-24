@@ -1,0 +1,116 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading page-heading--no-img s-back-switch">
+		<h1 class="page-heading__title">İcra ve İflas Hukuku</h1>
+	</div>
+
+
+	<!-- BREADCRUMBS -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="{% url 'anasayfa' %}" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="{% url 'uzmanliklar' %}" class="b-breadcrumbs__link">Uzmanlık Alanları</a>
+				<a href="{% url 'ailehukuku' %}" class="b-breadcrumbs__link">İcra ve İflas Hukuku</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- SINGLE PRACTICE -->
+	<div class="row align-center">
+		<div class="columns small-12 large-9">
+			<div class="single-practice">
+				<div class="row">
+					<div class="columns small-12">
+						<div class="single-content">
+							<figure class="post__thumb post__thumb--single-practice effect-apollo">
+								<img src="{% static 'websitesi/images/icra-ve-iflas-hukuku.png' %}" alt="İcra ve İflas Hukuku">
+								<div class="effect-apollo__overlay"></div>
+							</figure>
+							<h2>İcra ve İflas Hukuku</h2>
+							<p>&nbsp; İcra hukuku; hukukta yer alan her alanın ilişkili olduğu bir alandır. Çoğu zaman gereğinin yapılmasını isteme devletin cebrine ihtiyaç duyar. Hukukumuzda; temel prensiplerden olan kendiliğinden hakkı alma yasağı mevcuttur. Yasak kapsamında; borçlu, alacaklıya ödemesi veya vermesi gereken bir edimi yerine getirmiyorsa bunu devletin cebrine başvurarak sağlamalıdır. Örneğin bir para alacağınız var ve borçlunuz bunu ödemekten kaçınıyor. Ben her türlü alırım mantığı ile hareket etmeniz sizi Türk Ceza Kanunu’nda suç olarak tanımlanan yaptırımlara maruz bırakacaktır. Bu sebeple talebinizi meşru vasıtalar yoluyla istemek zorundasınız. </p>
+							<p> &nbsp;Borçlu tarafı ödemeye zorlamak ve alacağınıza en kısa sürede ulaşmak için en doğru takip yolunu seçmeli, hak düşürücü müddetlere dikkat etmeli ve zaman geçirmeden hareket etmeniz gereklidir. Çünkü İcra ve İflas Kanununda; kambiyo senetlerine mahsus haciz yoluyla takip, genel haciz yoluyla takip, ilamlı icra, ilamsız takip, itiraz, itirazın iptali davası, itirazın kaldırılması, istirdat davası, menfi tespit davası gibi sizi alacağınıza götüren farklı usuller mevcuttur.</p>
+
+                            <p>&nbsp; Kira sözleşmeleri ile ilgili düzenlemeler Borçlar Kanunu’nda yer almasına rağmen, kiralayan sıfatıyla kiraya verdiğiniz evinizin kirasını, kiracı düzenli ödemiyor ve siz kiracıyı tahliye ettirmek istiyorsanız bununla ilgili de İcra ve İflas Kanunundaki düzenlemeleri takip etmeniz ve kiralanan taşınmazın tahliyesi hükümlerini bilmeniz gerekecektir.   Tanıtım yapılan alanlar ile ilgili daha detaylı bilgiler için makaleler kısmına bakabilirsiniz.</p>
+
+							<h4>İcra ve İflas Hukuku Alanında Vekil Olduğumuz Hukuki Süreçlerden Bazıları:</h4>
+							<ul>
+								<li>İcra Takibi Açılması</li>
+								<li>İstirdat Davası</li>
+								<li>İtirazın Kaldırılması </li>
+								<li>İtirazın İptali </li>
+								<li>Mal Sorgusu</li>
+
+							</ul>
+
+                                                        <p>&nbsp; Ofisimizin de çalışma alanlarından olan İcra Hukukuna ait takip ve davaları hakkında, hak ve menfaat kaybına uğramamanız açısından uzman avukatlar ile çalışmanız yararınıza olacaktır. </p>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- SIDEBAR -->
+		<div class="columns small-12 medium-6 large-3">
+
+			<!-- Practice Areas -->
+			<section class="widget widget_categories">
+				<h3 class="widget-title">Uzmanlık Alanları</h3>
+				<ul>
+					<li><a href="{% url 'ailehukuku' %}">Aile Hukuku</a></li>
+					<li><a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a></li>
+					<li><a href="{% url 'cezahukuku' %}">Ceza Hukuku</a></li>
+					<li><a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a></li>
+					<li><a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a></li>
+					<li><a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a></li>
+					<li><a href="{% url 'ishukuku' %}">İş ve Sosyal Güvenlik Hukuku</a></li>
+					<li><a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a></li>
+					<li><a href="{% url 'trafikhukuku' %}">Trafik Sigorta Hukuku</a></li>
+				</ul>
+			</section>
+			<!-- Latest Posts -->
+			<section class="widget widget-latest-posts">
+				<h3 class="widget-title">Ajun Hukuk'tan Son Yayınlar</h3>
+				<ul>
+                    {% for yayin in ucmakale %}
+					<li>
+						<a class="widget__date" href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_yayintarihi }}</a>
+						<h4><a href="{% url 'makaledetay' makaleslug=yayin.makale_slug %}">{{ yayin.makale_baslik }}</a></h4>
+					</li>
+                    {% endfor %}
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<!-- GET A QUOTE -->
+	<div class="get-a-quote">
+		<div class="row align-center">
+			<div class="column small-12 medium-expand">
+				<h3 class="get-a-quote__text">Aile Hukuku ile ilgili hukuki bir sorununuz mu var?</h3>
+			</div>
+			<div class="column small-12 shrink">
+				<a href="+902322423661" class="btn get-a-quote__link">Hemen Ara</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

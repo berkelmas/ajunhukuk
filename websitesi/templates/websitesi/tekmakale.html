@@ -1,0 +1,142 @@
+{% load static %}
+
+{% include 'websitesi/components/header.html' %}
+
+
+	<!-- PAGE HEADING -->
+	<div class="page-heading  page-heading--no-img">
+		<h1 class="page-heading__title">{{ makale.makale_baslik }}</h1>
+	</div>
+
+	<!-- BREADCRUMBS -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="{% url 'anasayfa' %}" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="{% url 'makaleler' %}" class="b-breadcrumbs__link">Hukuki Yayınlar</a>
+				<a href="{% url 'makaledetay' makaleslug=makale.makale_slug %}" class="b-breadcrumbs__link">{{ makale.makale_baslik }}</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row align-center">
+		<div class="columns small-12 large-9">
+			<article class="post single-post">
+				<header class="post__header">
+					<figure class="post__thumb effect-apollo">
+						<img src="{% static 'websitesi/images/ajun-hukuk-makaleleri.png' %}" alt="Ajun Hukuk Makaleleri">
+						<div class="effect-apollo__overlay"></div>
+					</figure>
+					<div class="post__meta">
+						<time class="post__date">{{ makale.makale_yayintarihi }}</time>
+
+					</div>
+					<h2 class="post__title">{{ makale.makale_baslik }}</h2>
+				</header>
+
+				<div class="post__content single-content">
+                    {{ makale.makale_mesaj|safe }}
+				</div>
+
+				<footer class="post__footer">
+					<div class="row align-justify">
+						<div class="columns post__tags">
+                            <section class="widget widget_tag_cloud">
+                                <h3 class="widget-title">Makale Etiketleri</h3>
+                                <div class="tagcloud">
+
+                                    {% for tag in makale.tag.all %}
+                                    <a href="#" class="tag-link">{{ tag.makale_tag_isim }}</a>
+
+                                    {% endfor %}
+                                </div>
+                            </section>
+						</div>
+
+					</div>
+
+					<div class="row align-justify medium-collapse post__pager">
+						<div class="columns"><a href="/{{ oncekimakale.makale_slug }}" class="post__pager--prev link-arrow">Önceki Makale</a></div>
+						<div class="columns shrink"><a href="/{{ oncekimakale.makale_slug }}" class="link-arrow">Sonraki Makale</a></div>
+					</div>
+					<section class="row post-author">
+						<div class="columns shrink post-author__column">
+							<figure class="effect-apollo post-author__photo">
+								<div>
+									<img src="{% static 'websitesi/images/yazar-engin-ajun.png' %}" alt="Avukat Engin Ajun" class="s-img-switch">
+								</div>
+							</figure>
+						</div>
+						<div class="columns">
+							<h4 class="post-author__title"><a href="{% url 'hakkimizda' %}">Avukat Engin Ajun</a></h4>
+							<p>İzmir ilinde 8 Ağustos 1988 yılında doğmuş ve güncel olarak İzmir Barosuna kayıtlı olan Kurucu Avukat Engin AJUN, Yaşar Üniversitesi Hukuk Fakültesi ve Ege Üniversitesi İngilizce Uluslararası İlişkiler bölümlerini bitirmiş ve 2 üniversite mezunudur. Gençliğinden itibaren yapmakta olduğu sosyal çalışmalar, ulusal-uluslararası sunumları ve özel aldığı eğitimler ile birçok ödül ve sertifika sahibidir.</p>
+							<div class="socials">
+								<a href="#"><i class="icon-twitter"></i></a>
+								<a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-instagram"></i></a>
+
+							</div>
+						</div>
+					</section>
+				</footer>
+			</article>
+
+
+		</div>
+
+		<!-- SIDEBAR -->
+		<div class="columns small-12 medium-6 large-3">
+			<!-- Latest Posts -->
+			<section class="widget widget-latest-posts">
+				<h3 class="widget-title">Son Makaleler</h3>
+				<ul>
+                    {% for yayin in ucmakale %}
+					<li>
+						<a class="widget__date" href="news.html">{{ yayin.makale_yayintarihi }}</a>
+						<h4><a href="single_news.html">{{ yayin.makale_baslik }}</a></h4>
+					</li>
+                    {% endfor %}
+				</ul>
+			</section>
+			<!-- Categories -->
+			<section class="widget widget_categories">
+				<h3 class="widget-title">Hukuki Yayın Kategorileri</h3>
+				<ul>
+					<li><a href="{% url 'makaleler' %}?hukuki-alan=ishukuku">İş ve Sosyal Güvenlik Hukuku</a></li>
+					<li><a href="{% url 'makaleler' %}?hukuki-alan=cezahukuku">Ceza Hukuku</a></li>
+					<li><a href="{% url 'makaleler' %}?hukuki-alan=ailehukuku">Aile Hukuku</a></li>
+					<li><a href="{% url 'makaleler' %}?hukuki-alan=icrahukuku">İcra ve İflas Hukuku</a></li>
+                    <li><a href="{% url 'makaleler' %}?hukuki-alan=gayrimenkulhukuku">Gayrimenkul Hukuku</a></li>
+                    <li><a href="{% url 'makaleler' %}?hukuki-alan=saglikhukuku">Sağlık Hukuku</a></li>
+                    <li><a href="{% url 'makaleler' %}?hukuki-alan=trafikhukuku">Trafik Sigorta Hukuku</a></li>
+                    <li><a href="{% url 'makaleler' %}?hukuki-alan=sozlesmelerhukuku">Sözleşmeler Hukuku</a></li>
+                    <li><a href="{% url 'makaleler' %}?hukuki-alan=ticarethukuku">Ticaret Hukuku</a></li>
+				</ul>
+			</section>
+
+
+
+
+
+		</div>
+	</div>
+
+	<!-- GET A QUOTE -->
+	<div class="get-a-quote">
+		<div class="row align-center">
+			<div class="column small-12 medium-expand">
+				<h3 class="get-a-quote__text">{{ makale.get_makale_kategori_display }} İle İlgili Sorununuz Mu Var? Ajun Hukuk Ekibi Sizin İçin Burada</h3>
+			</div>
+			<div class="column small-12 shrink">
+				<a href="tel:+902322423661" class="btn get-a-quote__link">Hemen Ara</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}

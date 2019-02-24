@@ -1,0 +1,49 @@
+/* widget - latest post with thumbnails */
+.widget-latest-posts {
+	&-thumb {
+		@extend .widget-latest-posts;
+		ul {
+			li {
+				display: flex;
+				padding-bottom: 5px;
+				margin-bottom: 15px;
+			}
+		}
+		&__thumb {
+			width: 45px;
+			height: 40px;
+			min-width: 45px;
+			margin-right: 15px;
+			> .s-back-switch {
+				height: 100%;
+			}
+		}
+		&__item-meta {
+			margin-top: -9px;
+		}
+	}
+}
+
+.dark-section {
+	.widget-latest-posts-thumb {
+		&__title {
+			a {
+				color: #b4b4b4;
+			}
+		}
+		li {
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+		ul {
+			margin-top: 32px;
+		}
+		.widget__date {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}

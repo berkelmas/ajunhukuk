@@ -1,0 +1,265 @@
+{% load static %}
+
+<!doctype html>
+<html lang="tr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'websitesi/images/ajun-hukuk-favicon.png' %}"/>
+
+    <meta name="robots" content="index,follow">
+
+
+    {% if nbar == 'anasayfa' %}
+
+    <title>Ajun Hukuk | Danışmanlık</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir merkezli olarak kurulan Ajun Hukuk ve Danışmanlık bürosunun tanıtıcı internet sitesidir.">
+
+    {% elif nbar == 'hakkimizda' %}
+
+    <title>Ajun Hukuk - Hakkımızda</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki bürosunda 2014 yılından beri müvekkillerine avukatlık hizmeti vermekte gerekli davaların açılmasında hukuk faaliyetleri yürütmektedir. ">
+
+    {% elif nbar == 'uzmanliklar' %}
+
+    <title>Ajun Hukuk - Uzmanlıklar</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki bürosunda Aile, İcra iflas, Ceza ,Gayrimenkul,Ticaret, İş ,Sağlık ve Trafik Sigorta hukuku alanlarında faaliyet göstermektedir.">
+
+    {% elif nbar == 'makaleler' %}
+
+    <title>Ajun Hukuk - Hukuki Yayınlar</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından düzenli olarak faaliyet alanları üzerine tecrübeleri ve görüşlerini kaleme aldığı Hukuki Yayınlarından oluşan makaleleri bulunmaktadır.">
+
+    {% elif nbar == 'kariyer' %}
+
+    <title>Ajun Hukuk - Kariyer Olanakları</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki bürosunda hukuki faliyetlerini yürütürken tecrübelerini aktaracağı ve yanında yetiştirmek üzere meslektaşlar aramaktadır.">
+
+    {% elif nbar == 'iletisim' %}
+
+    <title>Ajun Hukuk - Bize Ulaşın</title>
+    <meta name="description" content="Ajun Hukuk Bürosunun yer ve ulaşım adreslerinin yer aldığı sayfadır.">
+
+    {% elif nbar == 'makaledetay' %}
+
+        <title>{{ makale.makale_baslik }}</title>
+        <meta name="description" content="{{ makale.makale_meta_description }}">
+
+        <meta property="og:title" content="{{ makale.makale_baslik }}" />
+        <meta property="og.image" content="https:www.ajunhukuk.com{% static 'websitesi/images/ajun-hukuk-makaleleri.png' %}">
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="{% url 'hakkimizda' %}" />
+        <meta property='article:publisher' content="{% url 'makaledetay' makaleslug=makale.makale_slug %}" />
+        <meta property='og:site_name' content='Ajun Hukuk | Danışmanlık' />
+
+    {% elif nalt == 'ailehukuku' %}
+
+    <title>Ajun Hukuk - Aile Hukuku</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki Bürosunda  Aile Hukuku alanında evlenme,boşanma,nişanlanma ve soybağı davaları titizlikle yürütülmektedir.">
+
+    {% elif nalt == 'icrahukuku' %}
+
+    <title>Ajun Hukuk - İcra Hukuku</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki bürosunda şirketlerin ve şahısların alacaklarının tahsil edilmesine icra takibi ve icra davalarını yürütmektedir.">
+
+    {% elif nalt == 'cezahukuku' %}
+
+    <title>Ajun Hukuk - Ceza Hukuku</title>
+    <meta name="description" content="Ajun Hukuk İzmir’deki bürosunda Ceza Hukuku alanında müvekkillerinin savunmalarını yapmakta ve ceza davalarını yürütmektedir.">
+
+    {% elif nalt == 'gayrimenkulhukuku' %}
+
+    <title>Ajun Hukuk - Gayrimenkul Hukuku</title>
+    <meta name="description" content="Ajun Hukuk İzmir’deki bürosunda gayrimenkul hukuku alanında taşınmaz malların alım satımı ve irtifak ipotek tesis ile terkini davalarını yürütmektedir.">
+
+    {% elif nalt == 'sozlesmelerhukuku' %}
+
+    <title>Ajun Hukuk - Sözleşmeler Hukuku</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki bürosunda Sözleşmeler hukuku alanında sözleşmelere danışmanlık ve gerekli davaların açılmasını sağlanmaktadır.">
+
+    {% elif nalt == 'ticarethukuku' %}
+
+    <title>Ajun Hukuk - Ticaret Hukuku</title>
+    <meta name="description" content="Engin Ajun Ticaret Hukuku alanında Ticari şirketlere hukuki danışamanlık hizmeti vermekte ve ticari davaları yürütmektedir.">
+
+    {% elif 'ishukuku' %}
+
+    <title>Ajun Hukuk - İş Hukuku</title>
+    <meta name="description" content="Avukat Engin Ajun tarafından İzmir’deki bürosunda İş Hukuku alanında avukatlık yapmakta, kıdem ve ihbar tazminatı ile işe iade davalarını yürütmektedir.">
+
+    {% elif nbar == 'saglikhukuku' %}
+
+    <title>Ajun Hukuk - Sağlık Hukuku</title>
+    <meta name="description" content="Engin Ajun Sağlık Hukuku alanında doktor ve hastanenin yanlış uygulamaları sonucu hasta ile aralarındaki uyuşmazlıklarda avukatlık yapmaktadır.">
+
+    {% elif nbar == 'trafikhukuku' %}
+
+    <title>Ajun Hukuk - Trafik Sigorta Hukuku</title>
+    <meta name="description" content="Sigorta Hukukunun alt dallarından Trafik Sigorta Hukuku alanında oluşacak tazminat davalarının açılması ve tahsili alanında faaliyet yürütmektedir.">
+
+    {% endif %}
+
+    <!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Gudea:400,400i,700%7CPT+Serif:400,400i,700,700i%7CSlabo+27px&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet">
+
+
+    <!-- STYLES -->
+	<!-- libs -->
+	<link rel="stylesheet" href="{% static 'websitesi/css/fontello.css' %}">
+	<link rel="stylesheet" href="{% static 'websitesi/css/foundation/foundation.css' %}">
+	<link rel="stylesheet" href="{% static 'websitesi/css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'websitesi/css/magnific-popup.css' %}">
+
+
+
+    <!-- custom -->
+	<link rel="stylesheet" href="{% static 'websitesi/css/main.css' %}">
+
+
+
+    <!-- LayerSlider stylesheet -->
+	<link rel="stylesheet" href="{% static 'websitesi/layerslider/css/layerslider.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'websitesi/css/soncss.css' %}" type="text/css">
+
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<header class="main-header ">
+		<div class="row-fluid row-fluid--socials">
+			<div class="row align-right">
+				<div class="columns shrink">
+					<div class="socials socials--slide-hover">
+						<a href="#">
+							<i class="icon-twitter icon-hover"></i>
+							<i class="icon-twitter"></i>
+						</a>
+						<a href="#">
+							<i class="icon-facebook icon-hover"></i>
+							<i class="icon-facebook"></i>
+						</a>
+						<a href="#">
+							<i class="icon-instagram icon-hover"></i>
+							<i class="icon-instagram"></i>
+						</a>
+						<a href="#">
+							<i class="icon-linkedin icon-hover"></i>
+							<i class="icon-linkedin"></i>
+						</a>
+
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid" id="js-menu-sticky-anchor">
+			<div class="row align-justify align-middle row-logo">
+				<div class="columns small-12 medium-6">
+					<div class="logo">
+						<a href="{% url 'anasayfa' %}">
+
+							<img id="basresim" width="180" src="{% static 'websitesi/images/ajun-hukuk-logo.png' %}" alt="Ajun Hukuk Logo">
+
+						</a>
+					</div>
+				</div>
+				<div class="columns small-12 shrink">
+					<div class="contact-phone">
+						<i class="icon-phone-3"></i>Telefon: <span><a href="tel:+902322423661">0 (232) 242 36 61</a></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sticky-container">
+			<div class="row-fluid row-fluid--menu js-sticky">
+				<div class="row align-middle main-navigation">
+
+					<div class="columns small-order-2 large-order-1 menu-col">
+						<nav>
+							<ul class="menu main-menu">
+								<li class="menu-item {% if nbar == 'anasayfa' %} current-menu-item {% endif %}">
+									<a href="{% url 'anasayfa' %}">Ana Sayfa</a>
+
+								</li>
+								<li class="menu-item {% if nbar == 'hakkimizda' %} current-menu-item {% endif %}"><a href="{% url 'hakkimizda' %}">Hakkımızda</a></li>
+
+								<li class="menu-item {% if nbar == 'uzmanliklar' %} current-menu-item {% elif nbar == 'altuzmanliklar' %} current-menu-item {% endif %} ">
+									<a href="{% url 'uzmanliklar' %}">Uzmanlık Alanlarımız</a>
+									<ul class="menu sub-menu">
+										<li class="menu-item {% if nalt == 'ailehukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'ailehukuku' %}">Aile Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'icrahukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'icrahukuku' %}">İcra ve İflas Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'cezahukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'cezahukuku' %}">Ceza Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'gayrimenkulhukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'gayrimenkulhukuku' %}">Gayrimenkul Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'sozlesmelerhukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'sozlesmelerhukuku' %}">Sözleşmeler Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'ticarethukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'ticarethukuku' %}">Ticaret Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'ishukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'ishukuku' %}">İş Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'saglikhukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'saglikhukuku' %}">Sağlık Hukuku</a>
+										</li>
+										<li class="menu-item {% if nalt == 'trafikhukuku' %} current-menu-item {% endif %}">
+											<a href="{% url 'trafikhukuku' %}">Trafik Sigorta Hukuku</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="menu-item {% if nbar == 'makaleler' %} current-menu-item {% endif %} {% if nbar == 'makaledetay' %}current-menu-item{% endif %}"><a href="{% url 'makaleler' %}">Hukuki Yayınlarımız</a></li>
+
+
+
+								<li class="menu-item {% if nbar == 'kariyer' %} current-menu-item {% endif %}">
+									<a href="{% url 'kariyer' %}">Kariyer Olanakları</a>
+
+								</li>
+								<li class="menu-item {% if nbar == 'iletisim' %} current-menu-item {% endif %}">
+									<a href="{% url 'iletisim' %}">Bize Ulaşın</a>
+
+								</li>
+
+							</ul>
+						</nav>
+					</div>
+					<div class="columns large-1 small-order-1 large-order-2 small-12">
+						<div class="row align-middle menu-search-row">
+							<div class="columns">
+								<div class="nav-menu-icon"><i></i></div>
+							</div>
+							<div class="columns">
+								<div class="row small-collapse align-right">
+									<div class="columns menu-search-col">
+										<form class="search-form">
+											<input type="search" placeholder="Search">
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</header>

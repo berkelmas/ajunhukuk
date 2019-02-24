@@ -1,0 +1,29 @@
+/* widget tags */
+.widget_tag_cloud {
+	.tagcloud {
+		a {
+			border: 1px solid #e5e5e5;
+			display: inline-block;
+			padding: 5px 10px;
+			@include font(14px,#909090);
+			transition: .3s;
+			&:hover {
+				background-color: $cat-links-txt-color-normal;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.dark-section {
+	.tagcloud {
+		a {
+			border: 1px solid #707071;
+			&:hover {
+				border-color: #232325;
+				background-color: #232325;
+				color: #fff;
+			}
+		}
+	}
+}

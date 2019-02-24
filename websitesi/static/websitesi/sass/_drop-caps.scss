@@ -1,0 +1,23 @@
+/* DROP CAPS */
+.drop-caps {
+	p:first-child:first-letter {
+		float: left;
+		line-height: 36px;
+		padding: 7px 14px;
+		margin-right: 20px;
+		margin-top: -4px;
+	}
+	&--style-1 {
+		margin-bottom: 28px;
+		p:first-child:first-letter {
+			@include font(38px,#fff);
+			background-color: $main-theme-color;
+		}
+	}
+	&--style-2 {
+		p:first-child:first-letter {
+			@include font(38px,$content-color-minor);
+			box-shadow: inset 0 0 0 2px $content-color-minor, 0 0 1px transparent;
+		}
+	}
+}

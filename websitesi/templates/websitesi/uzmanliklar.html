@@ -1,0 +1,118 @@
+{% load static %}
+
+
+{% include 'websitesi/components/header.html' %}
+
+
+	<!-- En yukarı -->
+	<div class="page-heading page-heading--height-3  overlay">
+
+		<img class="s-img-switch" src="{% static 'websitesi/images/uzmanlik-alanlarimiz-resim.png' %}" alt="Ajun Hukuk Uzmanlık Alanları" />
+
+		<h2 class="page-heading__title">Uzmanlık Alanları</h2>
+	</div>
+
+	<!-- iç linkler -->
+	<div class="row">
+		<div class="column">
+			<div class="b-breadcrumbs">
+				<a href="{% url 'anasayfa' %}" class="b-breadcrumbs__link">Ana Sayfa</a>
+				<a href="{% url 'uzmanliklar' %}" class="b-breadcrumbs__link">Uzmanlık Alanlarımız</a>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- PRACTICE -->
+	<div class="row">
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-money-1"></div>
+				<h3 class="tile__title">Ticaret Hukuku</h3>
+				<p class="tile__description">Şirketler arası uyuşmazlıklardan doğan ticari davalarda ve hukuki uyuşmazlıkların her türlüsünde Ajun Hukuk faaliyet göstermektedir. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'ticarethukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-suitcase"></div>
+				<h3 class="tile__title">İş ve Sosyal güvenlik Hukuku</h3>
+				<p class="tile__description">Hem işçi hem işveren tarafında vekil olarak; iş hukuki ile ilgili uyuşmazlıklarda hukuksal danışmanlık ve dava avukatlığı yapıyoruz. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'ishukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-article-alt-1"></div>
+				<h3 class="tile__title">Borçlar Hukuku</h3>
+				<p class="tile__description">Gerçek ve tüzel kişiler arasındaki nisbi ilişkilerden doğan her türlü uyuşmazlık sonucu meydana gelen gerek uyuşmazlıkta gerek sözleşme hazırlığında yanınızdayız.</p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'sozlesmelerhukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-lifebuoy-1"></div>
+				<h3 class="tile__title">Trafik Sigorta Hukuku</h3>
+				<p class="tile__description">Meydana gelen trafik kazalarından doğan hukuki uyuşmazlıklarda hasar tespiti, hasar tazminatı vb. davaların sonuçlandırılmasında destek veriyoruz. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'trafikhukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-home-4"></div>
+				<h3 class="tile__title">Gayrimenkul Hukuku</h3>
+				<p class="tile__description">Taşınmazların aynından kaynaklanan hukuki uyuşmazlıkların çözümünde malik, kiracı vb. tarafında hukuki destek & danışmanlık sağlıyoruz. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'gayrimenkulhukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-umbrella"></div>
+				<h3 class="tile__title">Aile Hukuku</h3>
+				<p class="tile__description">Boşanma, eşler arası mal paylaşımı ve daha birçok aile hukukunu ilgilendiren hukuksal sorunların çözülmesinde gerek dava avukatlığı gerek hukuki danışmanlık sağlıyoruz. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'ailehukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-lock-open-alt-1"></div>
+				<h3 class="tile__title">Ceza Hukuku</h3>
+				<p class="tile__description">Müşteki ve sanık taraf avukatları olarak; Türk Ceza Kanunu'ndan doğan uyuşmazlıklar konusunda gerek duruşmalarda müdafiiliğinizi yapıyor gerek ceza hukukunda hukuksal danışmanlık veriyoruz. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'cezahukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-shield"></div>
+				<h3 class="tile__title">İcra ve İflas Hukuku</h3>
+				<p class="tile__description">İcra ve İflas Kanunu'na konu alacakların takibi, haciz, iflas istemi gibi konularda gerek ilamlı gerek ilamsız icra yolları ile hukuksal temsilciniz oluyoruz. </p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'icrahukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+		<div class="small-12 medium-6 large-4 columns tile-col">
+			<section class="tile effect-bubba">
+				<div class="tile__icon icon-heartbeat"></div>
+				<h3 class="tile__title">Sağlık Hukuku</h3>
+				<p class="tile__description">Hem hasta hem doktor tarafının vekili olarak duruşmalarda ve duruşma öncesi süreçte; sağlık hukukuna ilişkin konularda hukuki yardım sunuyoruz.</p>
+				<i class="tile__arrow icon-right-4"></i>
+				<a href="{% url 'saglikhukuku' %}" class="tile__link"></a>
+			</section>
+		</div>
+	</div>
+
+
+
+
+
+{% include 'websitesi/components/footer.html' %}
